@@ -1,0 +1,36 @@
+<ion-content [fullscreen]="true">
+  <div id="contenido">
+
+    <div #map id="map"></div>
+    <h3>Destino</h3>
+    <div class="input-wrapper">
+      <input type="text" [(ngModel)]="end" (input)="updateSearchResults()" placeholder="Destino">
+      <input type="text" placeholder="Precio">
+    </div>
+    <div class="input-wrapper">
+      <input type="text" placeholder="Asientos">
+      <input type="text" placeholder="hora">
+    </div>
+
+
+
+    <ion-list *ngIf="autocompleteItems" [hidden]="autocompleteItems.length === 0">
+      <ion-item *ngFor="let item of autocompleteItems" tappable (click)="selectSearchResult(item)">
+        {{ item.description }}
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>
+
+  <!-- <ion-list>
+    <ion-item *ngFor="let viaje of viajes">
+      <ion-label>
+        <h2>{{ viaje.nombre }}</h2>
+        <p>Destino: {{ viaje.destino }}</p>
+        <p>Cupos Disponibles: {{ viaje.cupos }}</p>
+        <p>Precio: ${{ viaje.precio }}</p>
+        <p>Contactar al conductor: {{ viaje.telefono }}</p>
+      </ion-label>
+      <ion-button expand="full" (click)="contactarConductor(viaje.telefono)">Contactar Conductor</ion-button>
+    </ion-item>
+  </ion-list> -->

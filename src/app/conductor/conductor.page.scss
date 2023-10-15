@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+
+*{
+  font-family: 'Oswald', sans-serif;
+}
+
+
+#contenedor {
+  background-color: #fafafa;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+  
+.title-container {
+  background-color: #f7a817;
+  color: #fff;
+  padding: 16px;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.title {
+  font-size: 30px;
+  margin-top: 8px;
+}
+
+#volver{
+    width: 30px;
+    height: 30px;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f7a817;
+  color: rgb(251, 252, 250);
+  height: 10vh;
+} 
+
+footer ion-icon {
+  margin: 4%;
+  width: 50px;
+  height: 35px;  
+}
+
+.formulario{
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+}
+
+.botones{
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+}
+  
+ion-button {
+  width: 200px; 
+  height: 30px; 
+  color: #000; 
+  font-size: 16px; 
+  margin: 20px auto; 
+  text-align: center; 
+  --background: #f7a817;
+  --box-shadow: 5px 5px 10px #cccbcb;
+  color: #fff;
+}
+
+@media (max-height:739px) {
+  .formulario{
+    padding-top: 10px;
+    }
+
+}
+  
+@media (min-height:740px) {
+
+}

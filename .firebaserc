@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "viajesduoc"
+  },
+  "targets": {
+    "viajesduoc": {
+      "hosting": {
+        "app": [
+          "viajesduoc"
+        ]
+      }
+    }
+  }
+}

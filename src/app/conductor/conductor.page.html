@@ -1,0 +1,49 @@
+<ion-content [fullscreen]="true">
+  <div id="contenedor">
+    <div class="title-container">
+      <div class="title">Te llevo APP</div>
+        <ion-icon id="volver" name="arrow-back-outline" (click)="volverPaginaAnterior()">
+        </ion-icon>
+    </div>
+
+    <div class="formulario">
+      <h3>Formulario de conductor</h3>
+      <form (ngSubmit)="submitForm()">
+        <ion-item>
+          <ion-label position="floating">Nombre</ion-label>
+          <ion-input type="text" [(ngModel)]="nombre" name="nombre" required></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Lugar de Destino</ion-label>
+          <ion-input type="text" [(ngModel)]="destino" name="destino" required></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Número de Teléfono</ion-label>
+          <ion-input type="number" [(ngModel)]="telefono" name="telefono" required></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Cupos Disponibles (Máximo 4)</ion-label>
+          <ion-input type="number" [(ngModel)]="cupos" name="cupos" min="1" max="4" required></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Precio a Cobrar</ion-label>
+          <ion-input type="number" [(ngModel)]="precio" name="precio" required></ion-input>
+        </ion-item>
+
+      </form>
+      <div class="botones">
+        <ion-button expand="full" (click)="submitForm()" class="boton-personalizado" (click)="presentAlert()">Iniciar</ion-button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <ion-icon routerLink="/historial" name="stats-chart-outline"></ion-icon>
+    <ion-icon name="home-outline"></ion-icon>
+    <ion-icon name="wallet-outline"></ion-icon>
+  </footer>
+</ion-content>
